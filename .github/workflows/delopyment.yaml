@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install NodeJS
-      uses: actions/setup-node@v-2-beta
+      uses: actions/setup-node@v2-beta
       with: 
         node-version: 12
     
@@ -20,7 +20,7 @@ jobs:
       run: npm install -g surge
     
     - name: Delopyment 
-      run: surge ./ http://mfaisalpk.surge.sh/ --token ${{secrets.SURGE}}
+      run: surge ./ mfaisalpk.surge.sh --token ${{secrets.SURGE}}
       
       
       
